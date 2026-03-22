@@ -5,6 +5,7 @@ def calculateRoverJourney():
     
     # Part C: Basic Error Handling for Inputs
     try:
+        #user inputs for coordinates, velocity, acceleration, and max speed
         x1 = float(input("Enter origin X coordinate: "))
         y1 = float(input("Enter origin Y coordinate: "))
         x2 = float(input("Enter destination X coordinate: "))
@@ -13,7 +14,8 @@ def calculateRoverJourney():
         u = float(input("Enter initial velocity (m/s): "))
         a = float(input("Enter acceleration (m/s^2): "))
         vMax = float(input("Enter Max speed (m/s): "))
-        
+
+        # Validate inputs
         if u < 0 or a < 0 or vMax <= 0:
             print("Error: Velocity, acceleration, and max speed must be positive values.")
             return 
